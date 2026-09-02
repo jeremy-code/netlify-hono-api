@@ -1,4 +1,4 @@
-import type { Context, Config } from "@netlify/functions";
+import type { Context, Config } from "@netlify/edge-functions";
 
 import { Hono } from "hono";
 import { handle } from "hono/netlify";

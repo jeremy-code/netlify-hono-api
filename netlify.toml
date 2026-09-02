@@ -1,6 +1,4 @@
 [build]
 publish = ""
-command = ""
-
-[functions]
-directory = "src"
+command = "pnpm run build"
+edge_functions = "src"
