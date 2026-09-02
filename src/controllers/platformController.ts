@@ -1,5 +1,5 @@
 import { HTTPException } from "hono/http-exception";
-import type { AppEnv } from "../interfaces/api";
+import type { AppEnv } from "../interfaces/api.ts";
 import type { Handler } from "hono/types";
 
 const platformController: Handler<AppEnv, "/context"> = (context) => {

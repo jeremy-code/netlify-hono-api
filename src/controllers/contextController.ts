@@ -1,4 +1,4 @@
-import type { AppEnv } from "../interfaces/api";
+import type { AppEnv } from "../interfaces/api.ts";
 import type { Handler } from "hono/types";
 
 const contextController: Handler<AppEnv, "/context"> = (context) => {

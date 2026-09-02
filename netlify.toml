@@ -2,3 +2,6 @@
 publish = ""
 command = "pnpm run build"
 edge_functions = "src"
+
+[functions]
+deno_import_map = "packages/ui/import_map.json"

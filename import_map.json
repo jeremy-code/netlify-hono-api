@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "hono": "https://esm.sh/hono@4.13.5",
+    "hono/": "https://esm.sh/hono@4.13.5/"
+  }
+}

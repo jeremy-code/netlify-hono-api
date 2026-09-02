@@ -1,6 +1,6 @@
-import { platformController } from "../controllers/platformController";
+import { platformController } from "../controllers/platformController.ts";
 import { Hono } from "hono";
-import type { AppEnv } from "../interfaces/api";
+import type { AppEnv } from "../interfaces/api.ts";
 
 export function setupPlatformRoutes(app: Hono<AppEnv>): void {
   app.get("/platform", platformController);

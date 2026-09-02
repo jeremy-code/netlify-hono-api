@@ -1,6 +1,6 @@
-import { contextController } from "../controllers/contextController";
+import { contextController } from "../controllers/contextController.ts";
 import { Hono } from "hono";
-import type { AppEnv } from "../interfaces/api";
+import type { AppEnv } from "../interfaces/api.ts";
 
 export function setupContextRoutes(app: Hono<AppEnv>): void {
   app.get("/context", contextController);
