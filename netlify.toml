@@ -1,4 +1,5 @@
 [build]
 publish = ""
 command = "pnpm run build"
+functions = ""
 edge_functions = "src"
