@@ -5,10 +5,18 @@ import netlifyEdge from "@netlify/vite-plugin-netlify-edge";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [netlify(), netlifyEdge()],
+  plugins: [
+    netlify({
+      build: {
+        enabled: true,
+        edgeSSR: true,
+      },
+    }),
+    netlifyEdge(),
+  ],
   input: "src/index.ts",
-  isBundled: true,
   build: {
+    ssr: true,
     rolldownOptions: {
       input: "src/index.ts",
     },
