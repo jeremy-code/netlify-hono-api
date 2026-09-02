@@ -2,7 +2,7 @@ import type { Context, Config } from "@netlify/edge-functions";
 
 import { Hono } from "hono";
 import { handle } from "hono/netlify";
-import type { AppEnv } from "./interfaces/api";
+import type { AppEnv } from "./interfaces/api.ts";
 import { setupAppRoutes } from "./routes/appRoutes.ts";
 import { secureHeaders } from "hono/secure-headers";
 import { logger } from "hono/logger";
