@@ -26,7 +26,10 @@ const platformController: Handler<AppEnv, "/context"> = (context) => {
     };
   }
 
-  if (globalThis instanceof WorkerGlobalScope) {
+  if (
+    typeof WorkerGlobalScope !== "undefined" &&
+    globalThis instanceof WorkerGlobalScope
+  ) {
     const workerGlobalScope = globalThis as unknown as WorkerGlobalScope;
     const { location, navigator } = workerGlobalScope;
 
@@ -59,7 +62,10 @@ const platformController: Handler<AppEnv, "/context"> = (context) => {
     };
   }
 
-  if (globalThis instanceof DedicatedWorkerGlobalScope) {
+  if (
+    typeof WorkerGlobalScope !== "undefined" &&
+    globalThis instanceof DedicatedWorkerGlobalScope
+  ) {
     const dedicatedWorkerGlobalScope =
       globalThis as unknown as DedicatedWorkerGlobalScope;
 
